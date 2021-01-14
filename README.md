@@ -14,7 +14,9 @@ This is my first coding project and the premise is to create a Fortune Teller fo
 
 ## TODO
 
+- Learn html
+- Learn Django
 - Add Webscraping to collect information on daily horoscopes
 - Use html and css to recreate current application as web application
-- Use Django/Flask to add the current app logic to web application
+- Use Django to add the current app logic to web application
 - Host the final product on the web
