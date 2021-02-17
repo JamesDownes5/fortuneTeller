@@ -1,0 +1,12 @@
+{% extends 'fortuneTeller/base.html' %}
+{% block content %}
+
+  <h1>{{ starSign }}</h1>
+
+  <form method="POST"> 
+    {% csrf_token %}
+    <input type="submit" name="btn" value="Info">
+    <input type="submit" name="btn" value="Daily Horoscope">
+  </form>
+
+{% endblock content %}

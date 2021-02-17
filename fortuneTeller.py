@@ -1,20 +1,24 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+# Libraries
 from tkinter import *
 from tkinter import ttk
 
 class homeScreen():                           # Home Screen Frame, which asks for the users age
 
-    starSign = {'January': {range(1, 19): 'Capricorn', range(20, 31): 'Aquarius'},          # Star Sign Dictionary, used to find star sign based on Birthday
-                'February': {range(1, 18): 'Aquarius', range(19, 29): 'Pisces'},
-                'March': {range(1, 20): 'Pisces', range(21, 31): 'Aries'},
-                'April': {range(1, 19): 'Aries', range(20, 30): 'Taurus'},
-                'May': {range(1, 20): 'Taurus', range(21, 31): 'Gemini'},
-                'June': {range(1, 21): 'Gemini', range(22, 30): 'Cancer'},
-                'July': {range(1, 22): 'Cancer', range(23, 31): 'Leo'},
-                'August': {range(1, 22): 'Leo', range(23, 31): 'Virgo'},
-                'September': {range(1, 22): 'Virgo', range(23, 30): 'Libra'},
-                'October': {range(1, 23): 'Libra', range(24, 31): 'Scorpio'},
-                'November': {range(1, 22): 'Scorpio', range(23, 30): 'Sagittarius'},
-                'December': {range(1, 21): 'Sagittarius', range(22, 31): 'Capricorn'},
+    starSign = {'january': {range(1, 20): 'Capricorn', range(20, 31): 'Aquarius'},          # Star Sign Dictionary, used to find star sign based on Birthday
+                'february': {range(1, 19): 'Aquarius', range(19, 29): 'Pisces'},
+                'march': {range(1, 21): 'Pisces', range(21, 31): 'Aries'},
+                'april': {range(1, 20): 'Aries', range(20, 30): 'Taurus'},
+                'may': {range(1, 21): 'Taurus', range(21, 31): 'Gemini'},
+                'june': {range(1, 22): 'Gemini', range(22, 30): 'Cancer'},
+                'july': {range(1, 23): 'Cancer', range(23, 31): 'Leo'},
+                'august': {range(1, 23): 'Leo', range(23, 31): 'Virgo'},
+                'september': {range(1, 23): 'Virgo', range(23, 30): 'Libra'},
+                'october': {range(1, 24): 'Libra', range(24, 31): 'Scorpio'},
+                'november': {range(1, 23): 'Scorpio', range(23, 30): 'Sagittarius'},
+                'december': {range(1, 22): 'Sagittarius', range(22, 31): 'Capricorn'},
                 }
 
     def __init__(self, root):
@@ -40,7 +44,7 @@ class homeScreen():                           # Home Screen Frame, which asks fo
 
         ttk.Label(self.mainframe, text='Fortune Teller', style='titleText.TLabel').grid(column=2, row=1, sticky=N)
         ttk.Label(self.mainframe, text='Welcome to the Fortune Teller.\nHere you can find out your star sign and what that says about you!', style='descriptiveText.TLabel').grid(column=2, row=2, sticky=N)
-        ttk.Label(self.mainframe, text='Please enter your Birthday.', style='descriptiveText.TLabel').grid(column=2, row=3, sticky=N)
+        ttk.Label(self.mainframe, text='Please enter your Birthday. (Example: 9 December)', style='descriptiveText.TLabel').grid(column=2, row=3, sticky=N)
 
         self.birthday = StringVar()
         birthdayEntry = ttk.Entry(self.mainframe, width=20, textvariable=self.birthday)
@@ -59,13 +63,13 @@ class homeScreen():                           # Home Screen Frame, which asks fo
         day = int(splitBirthday[0])
         month = splitBirthday[1]
 
-        monthStarSign = self.starSign[month]
+        monthStarSign = self.starSign[month.lower()]
 
         for key in monthStarSign:
             if day in key:
-               global personalStarSign 
-               personalStarSign= monthStarSign[key]
-            break
+                global personalStarSign 
+                personalStarSign = monthStarSign[key]
+                break
 
     def showInfoScreen(self):
         self.mainframe.destroy()
@@ -193,8 +197,7 @@ class infoScreen():
                                'Lucky Number': '11',
                                'Jewellery': 'Ivory Stone',
                                'Best Match': 'Scorpio, Cancer and Capricorn'},
-
-                    }
+                        }
 
     def __init__(self, root):
 
