@@ -1,0 +1,29 @@
+{% extends 'fortuneTeller/base.html' %}
+{% block content %}
+
+<h1>{{ starSign }}</h1>
+
+<table>
+  <tr>
+    <th>Horoscope</th>
+    <td>{{ dailyHoroscope }}</td>
+  </tr>
+  <tr>
+    <th>Love</th>
+    <td>{{ dailyLove }}</td>
+  </tr>
+  <tr>
+    <th>Work</th>
+    <td>{{ dailyWork }}</td>
+  </tr>
+  <tr>
+    <th>Dating</th>
+    <td>{{ dailyDating }}</td>
+  </tr>
+  <tr>
+    <th>Bonus</th>
+    <td>{{ dailyBonus }}</td>
+  </tr>
+</table>
+
+{% endblock content %}

@@ -6,10 +6,16 @@
     Here you can find out your star sign and what your sign says about you!
     </p>
 
-    <form action=' ', method='POST'> 
+    <form class='home', action='', method='POST'>
       {% csrf_token %}
-      {{ form }}
-      <input type="submit" value="Look into the Crystal Ball">
+      <label id='usersBirthday'>Please enter your Birthday day. (Example 9 December)</label>
+      <br>
+      <div>
+        {{ form }}
+      </div>
+      <div>
+        <input type="submit", class='input' value="Look into the Crystal Ball">
+      </div>
     </form>
   </body>
 {% endblock content %}

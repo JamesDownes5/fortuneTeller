@@ -1,7 +1,8 @@
 from django import forms
 
 class BirthdayForm(forms.Form):
-    usersBirthday = forms.CharField(label='Please enter your Birthday day. (Example 9 December)')
+    usersBirthday = forms.CharField(label='')
+    auto_id = False
 
 class OptionForm(forms.Form):
     btn = forms.CharField()

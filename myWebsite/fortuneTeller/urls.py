@@ -4,5 +4,6 @@ from . import views
 urlpatterns = [
     path('', views.home, name='fortuneTeller-home'),
     path('menu/', views.menu, name='fortuneTeller-menu'),
-    path('sagittarius/', views.sagittarius, name='fortuneTeller-starSign-sagittarius')
+    path('info/', views.info, name='fortuneTeller-info'),
+    path('dailyhoroscope/', views.DailyHoroscope, name='fortuneTeller-info')
 ]

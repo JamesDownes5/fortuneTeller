@@ -10,7 +10,7 @@ starSign = {'january': {range(1, 20): 'Capricorn', range(20, 31): 'Aquarius'},  
             'october': {range(1, 24): 'Libra', range(24, 31): 'Scorpio'},
             'november': {range(1, 23): 'Scorpio', range(23, 30): 'Sagittarius'},
             'december': {range(1, 22): 'Sagittarius', range(22, 31): 'Capricorn'},
-                }
+            }
 
 def Finder(birthday):                    # Function that uses StarSign dict to work out star sign
     splitBirthday = birthday.split(' ')
