@@ -1,0 +1,33 @@
+body {
+    color: white;
+    background: grey;
+    margin-top: 5rem;
+  }
+
+main {
+    color: black;
+    padding-left: 200px;
+    padding-right: 200px;
+  }
+
+h1 {
+  font-size: x-large;
+}
+
+  /* Navbar */
+
+  .site-header .navbar-nav .nav-link {
+    color: #cbd5db;
+  }
+  
+  .site-header .navbar-nav .nav-link:hover {
+    color: #ffffff;
+  }
+  
+  .site-header .navbar-nav .nav-link.active {
+    font-weight: 500;
+  }
+
+  .nav-item .nav-link {
+    color: black;
+  }

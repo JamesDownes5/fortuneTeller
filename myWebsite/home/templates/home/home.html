@@ -1,0 +1,58 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <link rel="stylesheet" type="text/css" href="{% static 'home/main.css' %}">
+
+    <title>Roosta's Website</title>
+
+<body>
+
+  <header class="site-header">
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand mr-4">Roosta's Website</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarToggle">
+          <div class="navbar-nav mr-auto">
+            <a class="nav-item nav-link" href="{% url 'fortuneTeller-home' %}">Fortune Teller</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <h1>If your reading this, you'll have to tell me how you managed to get here.</h1>
+
+    <p>Hi I'm James, Dev name Roosta, and I have an interest in computers. I didn't have an exact part of computer science I wanted to pursue, so I started learning Python using Al Sweigart's book, Automate the Boring
+    Stuff with Python. Since then I've been working on an EPQ for college which has really made me push myself to create something cool and that is how we've gotten here, this website.
+    This website has been create using Django and rewatching Corey Schafer's tutorial videos multiple times (Thanks Corey, lifesaver!). I hope to keep this website up and update to make it look 
+    better, as my CSS skills are terrible (I'll get around to learning how to use Bootstrap at some point). I was want to other projects that I make to this site and I might make a dev blog to give updates on what I'm doing.</p>
+
+    <h1>Fortune Teller - EPQ</h1>
+
+    <p>The fortune teller app idea is one I embelished from martyr2s mega project list, which was to build a webscraper program that collected your daily horoscope. My final app
+    takes the user's birthday, works out their starsign, then displays a menu asking the user if want info on there star sign or if they want their daily horoscope.</p>
+
+    <h1>See You Around Space Cowboy/girl...</h1>
+  </main>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</body>
+</html>
