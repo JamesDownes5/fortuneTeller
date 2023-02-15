@@ -17,7 +17,7 @@ def home(request):
     else:
         form = BirthdayForm()
 
-    return render(request, 'fortuneteller/home.html', {'form': form, 'title' : 'Home'})
+    return render(request, 'fortuneTeller/home.html', {'form': form, 'title' : 'Home'})
 
 def menu(request):
     if request.method == 'POST':
@@ -27,53 +27,53 @@ def menu(request):
             val = form.cleaned_data.get("btn")
             
             if val == 'Info':
-                return HttpResponseRedirect('/fortuneteller/info/', {'starSign' : starSign })
+                return HttpResponseRedirect('/info/', {'starSign' : starSign })
             
             elif val == 'Daily Horoscope':
-                return HttpResponseRedirect('/fortuneteller/dailyhoroscope/', {'starSign' : starSign })
+                return HttpResponseRedirect('/dailyhoroscope/', {'starSign' : starSign })
             
     else:
         form = OptionForm()
 
-    return render(request, 'fortuneteller/menu.html', {'starSign' : personalStarSign, 'form' : form, 'title' : 'Menu'})
+    return render(request, 'fortuneTeller/menu.html', {'starSign' : personalStarSign, 'form' : form, 'title' : 'Menu'})
 
 def info(request):
 
     if personalStarSign == 'Aquarius':                                          #TODO Maybe use a for loop with a list of star signs to cycle through
-        return render(request, 'fortuneteller/starSignInfo/aquarius.html', {'title' : 'Info'})
+        return render(request, 'fortuneTeller/starSignInfo/aquarius.html', {'title' : 'Info'})
 
     elif personalStarSign == 'Aries':
-        return render(request, 'fortuneteller/starSignInfo/aries.html', {'title' : 'Info'})
+        return render(request, 'fortuneTeller/starSignInfo/aries.html', {'title' : 'Info'})
 
     elif personalStarSign == 'Cancer':
-        return render(request, 'fortuneteller/starSignInfo/cancer.html', {'title' : 'Info'})
+        return render(request, 'fortuneTeller/starSignInfo/cancer.html', {'title' : 'Info'})
 
     elif personalStarSign == 'Capricorn':
-        return render(request, 'fortuneteller/starSignInfo/capricorn.html', {'title' : 'Info'})
+        return render(request, 'fortuneTeller/starSignInfo/capricorn.html', {'title' : 'Info'})
 
     elif personalStarSign == 'Gemini':
-        return render(request, 'fortuneteller/starSignInfo/gemini.html', {'title' : 'Info'})
+        return render(request, 'fortuneTeller/starSignInfo/gemini.html', {'title' : 'Info'})
 
     elif personalStarSign == 'Leo':
-        return render(request, 'fortuneteller/starSignInfo/leo.html', {'title' : 'Info'})
+        return render(request, 'fortuneTeller/starSignInfo/leo.html', {'title' : 'Info'})
 
     elif personalStarSign == 'Libra':
-        return render(request, 'fortuneteller/starSignInfo/libra.html', {'title' : 'Info'})
+        return render(request, 'fortuneTeller/starSignInfo/libra.html', {'title' : 'Info'})
 
     elif personalStarSign == 'Pisces':
-        return render(request, 'fortuneteller/starSignInfo/pisces.html', {'title' : 'Info'})
+        return render(request, 'fortuneTeller/starSignInfo/pisces.html', {'title' : 'Info'})
 
     elif personalStarSign == 'Sagittarius':
-        return render(request, 'fortuneteller/starSignInfo/sagittarius.html', {'title' : 'Info'})
+        return render(request, 'fortuneTeller/starSignInfo/sagittarius.html', {'title' : 'Info'})
 
     elif personalStarSign == 'Scorpio':
-        return render(request, 'fortuneteller/starSignInfo/scorpio.html', {'title' : 'Info'})
+        return render(request, 'fortuneTeller/starSignInfo/scorpio.html', {'title' : 'Info'})
 
     elif personalStarSign == 'Taurus':
-        return render(request, 'fortuneteller/starSignInfo/taurus.html', {'title' : 'Info'})
+        return render(request, 'fortuneTeller/starSignInfo/taurus.html', {'title' : 'Info'})
 
     elif personalStarSign == 'Virgo':
-        return render(request, 'fortuneteller/starSignInfo/virgo.html', {'title' : 'Info'})
+        return render(request, 'fortuneTeller/starSignInfo/virgo.html', {'title' : 'Info'})
 
 
 def DailyHoroscope(request):
